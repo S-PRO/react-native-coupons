@@ -10,8 +10,13 @@ jest.mock('react-navigation', () => {
   return {
     createStackNavigator: () => () => <View />,
     createBottomTabNavigator: () => () => <View />,
+    createTabNavigator: () => () => <View />,
     getParams: (param, defaultValue) => defaultValue,
   };
+});
+
+jest.mock('react-native-snap-carousel', () => {
+  return {};
 });
 
 jest.mock("react-native", () => {
